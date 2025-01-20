@@ -1,4 +1,4 @@
-import { Operation, StrKey } from 'stellar-sdk';
+import { Operation, StrKey } from '@stellar/stellar-sdk';
 
 export default function getValue(operation: Operation.SetOptions) {
     if (operation.signer) {

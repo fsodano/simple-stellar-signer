@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { FeeBumpTransaction, Transaction, TransactionBuilder, xdr } from 'stellar-sdk';
+    import { FeeBumpTransaction, Transaction, TransactionBuilder, xdr } from '@stellar/stellar-sdk';
     import { createEventDispatcher } from 'svelte';
     import { onMount } from 'svelte';
     import { Link } from 'svelte-navigator';

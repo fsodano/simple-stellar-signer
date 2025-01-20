@@ -1,4 +1,4 @@
-import type { Operation as OperationType, Transaction } from 'stellar-sdk';
+import type { Operation as OperationType, Transaction } from '@stellar/stellar-sdk';
 
 import AbstractOperationComponent from '../AbstractOperationComponent';
 import type IOperationComponent from '../IOperationComponent';

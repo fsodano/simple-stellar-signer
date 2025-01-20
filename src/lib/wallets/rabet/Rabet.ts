@@ -1,4 +1,4 @@
-import type { FeeBumpTransaction, Transaction } from 'stellar-sdk';
+import type { FeeBumpTransaction, Transaction } from '@stellar/stellar-sdk';
 
 import { RabetIcon } from '../../../assets';
 import { CURRENT_STELLAR_NETWORK, StellarNetwork } from '../../stellar/StellarNetwork';

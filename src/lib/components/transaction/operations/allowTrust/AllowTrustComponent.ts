@@ -1,5 +1,5 @@
+import type { Operation, Transaction } from '@stellar/stellar-sdk';
 import type { ITranslation } from 'src/lib/i18n/ITranslation';
-import type { Operation, Transaction } from 'stellar-sdk';
 
 import AbstractOperationComponent from '../AbstractOperationComponent';
 import type IOperationComponent from '../IOperationComponent';

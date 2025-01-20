@@ -1,4 +1,4 @@
-import type { Operation, Transaction } from 'stellar-sdk';
+import type { Operation, Transaction } from '@stellar/stellar-sdk';
 
 import InvalidComponentTypeError from '../errors/InvalidComponentTypeError';
 import type { OperationComponent } from './OperationComponent';

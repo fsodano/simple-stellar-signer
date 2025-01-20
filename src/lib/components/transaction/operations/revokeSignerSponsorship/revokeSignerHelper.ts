@@ -1,4 +1,4 @@
-import { SignerKeyOptions, StrKey } from 'stellar-sdk';
+import { SignerKeyOptions, StrKey } from '@stellar/stellar-sdk';
 
 import InvalidSignerTypeError from '../../errors/InvalidSignerTypeError';
 

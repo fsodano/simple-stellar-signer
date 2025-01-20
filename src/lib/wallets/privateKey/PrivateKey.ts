@@ -1,5 +1,5 @@
-import type { FeeBumpTransaction, Transaction } from 'stellar-sdk';
-import { Keypair } from 'stellar-sdk';
+import type { FeeBumpTransaction, Transaction } from '@stellar/stellar-sdk';
+import { Keypair } from '@stellar/stellar-sdk';
 
 import { PrivateKeyIcon } from '../../../assets';
 import type IDecryptableValue from '../../security/IDecryptableValue';

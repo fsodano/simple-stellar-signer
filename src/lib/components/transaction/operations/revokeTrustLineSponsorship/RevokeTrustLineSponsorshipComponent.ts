@@ -1,4 +1,4 @@
-import { Asset, Operation, Transaction } from 'stellar-sdk';
+import { Asset, Operation, Transaction } from '@stellar/stellar-sdk';
 
 import AbstractOperationComponent from '../AbstractOperationComponent';
 import type IOperationComponent from '../IOperationComponent';

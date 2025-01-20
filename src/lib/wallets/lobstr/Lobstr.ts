@@ -1,5 +1,5 @@
 import { getPublicKey, isConnected, signTransaction } from '@lobstrco/signer-extension-api';
-import type { FeeBumpTransaction, Transaction } from 'stellar-sdk';
+import type { FeeBumpTransaction, Transaction } from '@stellar/stellar-sdk';
 
 import { LobstrIcon } from '../../../assets';
 import { StellarNetwork } from '../../stellar/StellarNetwork';

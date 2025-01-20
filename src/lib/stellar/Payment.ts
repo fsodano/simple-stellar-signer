@@ -1,4 +1,4 @@
-import { Asset, BASE_FEE, Operation, TransactionBuilder } from 'stellar-sdk';
+import { Asset, BASE_FEE, Operation, TransactionBuilder } from '@stellar/stellar-sdk';
 
 import { CURRENT_NETWORK_PASSPHRASE } from './StellarNetwork';
 import { server } from './utils';

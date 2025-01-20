@@ -1,4 +1,4 @@
-import type { Transaction } from 'stellar-sdk';
+import type { Transaction } from '@stellar/stellar-sdk';
 import type { ComponentType } from 'svelte';
 
 import NotImplementedError from '../errors/NotImplementedError';

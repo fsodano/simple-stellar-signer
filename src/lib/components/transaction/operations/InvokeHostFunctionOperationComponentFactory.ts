@@ -1,4 +1,4 @@
-import type { Operation, Transaction } from 'stellar-sdk';
+import type { Operation, Transaction } from '@stellar/stellar-sdk';
 
 import { getContractAddress, getContractMethodsParams } from '../../../soroban/GetContractFunctionInfo';
 import { InvokeHostFunction, InvokeHostFunctionType } from '../../../stellar/InvokeHostFunction';

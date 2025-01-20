@@ -1,6 +1,6 @@
+import type { FeeBumpTransaction, Transaction } from '@stellar/stellar-sdk';
 import type { SessionTypes } from '@walletconnect/types';
 import type IStorage from 'src/lib/storage/IStorage';
-import type { FeeBumpTransaction, Transaction } from 'stellar-sdk';
 
 import { WalletConnectIcon } from '../../../assets';
 import { NoPublicKeyError } from '../../errors/WalletConnectErrors';

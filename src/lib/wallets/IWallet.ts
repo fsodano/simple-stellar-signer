@@ -1,4 +1,4 @@
-import type { FeeBumpTransaction, Transaction } from 'stellar-sdk';
+import type { FeeBumpTransaction, Transaction } from '@stellar/stellar-sdk';
 import type { ComponentType } from 'svelte';
 
 export default interface IWallet {

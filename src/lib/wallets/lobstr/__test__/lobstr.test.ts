@@ -38,7 +38,7 @@ jest.mock('@lobstrco/signer-extension-api', () => ({
     signTransaction: jest.fn(),
 }));
 
-jest.mock('stellar-sdk', () => {
+jest.mock('@stellar/stellar-sdk', () => {
     return {
         Transaction: jest.fn().mockImplementation(() => mockTx),
         Networks: {

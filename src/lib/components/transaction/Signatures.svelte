@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { StrKey, xdr } from 'stellar-sdk';
+    import { StrKey, xdr } from '@stellar/stellar-sdk';
 
     import { language } from '../../../store/global';
 

@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 import { expect } from '@jest/globals';
-import StellarSdk from 'stellar-sdk';
+import StellarSdk from '@stellar/stellar-sdk';
 import { TextDecoder, TextEncoder } from 'util';
 
 import LocalStorage from '../../../storage/storage';
@@ -20,7 +20,7 @@ const mockTx = {
     toXDR: jest.fn(),
 };
 
-jest.mock('stellar-sdk', () => {
+jest.mock('@stellar/stellar-sdk', () => {
     return {
         Keypair: {
             fromSecret: jest.fn(),

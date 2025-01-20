@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 import { expect } from '@jest/globals';
 import { signTransaction } from '@stellar/freighter-api';
-import * as StellarSdk from 'stellar-sdk';
+import * as StellarSdk from '@stellar/stellar-sdk';
 
 import { StellarNetwork } from '../../../stellar/StellarNetwork';
 import LocalStorage from '../../../storage/storage';
@@ -22,7 +22,7 @@ jest.mock('@stellar/freighter-api', () => ({
     signTransaction: jest.fn(),
 }));
 
-jest.mock('stellar-sdk', () => {
+jest.mock('@stellar/stellar-sdk', () => {
     return {
         Transaction: jest.fn().mockImplementation(() => mockTx),
         Networks: {

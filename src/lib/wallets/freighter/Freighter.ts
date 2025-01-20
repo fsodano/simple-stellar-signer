@@ -1,5 +1,5 @@
 import { getPublicKey, isConnected, signTransaction } from '@stellar/freighter-api';
-import type { FeeBumpTransaction, Transaction } from 'stellar-sdk';
+import type { FeeBumpTransaction, Transaction } from '@stellar/stellar-sdk';
 
 import { FreighterIcon } from '../../../assets';
 import { CURRENT_STELLAR_NETWORK, StellarNetwork } from '../../stellar/StellarNetwork';

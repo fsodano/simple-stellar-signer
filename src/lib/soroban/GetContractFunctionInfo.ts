@@ -1,4 +1,4 @@
-import { Address, Contract, SorobanRpc, StrKey, xdr } from '@stellar/stellar-sdk';
+import { Address, Contract, rpc as SorobanRpc, StrKey, xdr } from '@stellar/stellar-sdk';
 import { Buffer } from 'buffer';
 
 import type { ContractFunctionInfo, InputInfo } from './ContractFunctionInfo.interface';
