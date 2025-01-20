@@ -1,5 +1,5 @@
 import { expect } from '@jest/globals';
-import * as StellarSdk from 'stellar-sdk';
+import * as StellarSdk from '@stellar/stellar-sdk';
 
 import { StellarNetwork } from '../../../stellar/StellarNetwork';
 import LocalStorage from '../../../storage/storage';
@@ -7,6 +7,7 @@ import XBull from '../XBull';
 
 const signedXdr =
     'AAAAAgAAAAA2jYMwhev3yM7P+JWOv6kRQZAssek5zytAbbyhJbOjNQAAAGQAATOSAAAAAQAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA2jYMwhev3yM7P+JWOv6kRQZAssek5zytAbbyhJbOjNQAAAAAF9eEAAAAAAAAAAAA=';
+const networkPassphrase = 'Test SDF Future Network ; October 2022';
 const mockTx = {
     sign: jest.fn(),
     toXDR: jest.fn().mockReturnValue(signedXdr),
@@ -14,9 +15,10 @@ const mockTx = {
 
 jest.mock('../../../../constants', () => ({
     STELLAR_NETWORK: 'futurenet',
+    HORIZON_NETWORK_PASSPHRASE: 'Test SDF Future Network ; October 2022',
 }));
 
-jest.mock('stellar-sdk', () => {
+jest.mock('@stellar/stellar-sdk', () => {
     return {
         Transaction: jest.fn().mockImplementation(() => mockTx),
         Networks: {
@@ -30,7 +32,7 @@ const mockBridge = {
     closeConnections: jest.fn(),
 };
 
-jest.mock('@creit-tech/xbull-wallet-connect', () => {
+jest.mock('@creit.tech/xbull-wallet-connect', () => {
     return {
         xBullWalletConnect: jest.fn().mockImplementationOnce(() => mockBridge),
     };
@@ -57,6 +59,6 @@ describe('xBull management', () => {
         expect(result).toBe(responseXdr);
         expect(xBull.XBullNetwork).toEqual(xBullNetwork);
         expect(mockBridge.sign).toHaveBeenCalledTimes(1);
-        expect(mockBridge.sign).toHaveBeenLastCalledWith({ xdr: signedXdr, network: xBullNetwork });
+        expect(mockBridge.sign).toHaveBeenLastCalledWith({ xdr: signedXdr, network: networkPassphrase });
     });
 });
