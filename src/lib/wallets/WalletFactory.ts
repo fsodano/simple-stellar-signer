@@ -6,6 +6,7 @@ import InvalidWalletError from './InvalidWalletError';
 import Albedo from './albedo/Albedo';
 import Freighter from './freighter/Freighter';
 import Lobstr from './lobstr/Lobstr';
+import Passkey from './passkey/Passkey';
 import PrivateKey from './privateKey/PrivateKey';
 import Rabet from './rabet/Rabet';
 import WalletConnect from './walletConnect/WalletConnect';
@@ -13,7 +14,9 @@ import XBull from './xBull/XBull';
 
 export default class WalletFactory {
     createAll(): IWallet[] {
-        return [Albedo.NAME, XBull.NAME, Rabet.NAME, Freighter.NAME, Lobstr.NAME, PrivateKey.NAME].map(this.create);
+        return [Albedo.NAME, XBull.NAME, Rabet.NAME, Freighter.NAME, Lobstr.NAME, PrivateKey.NAME, Passkey.NAME].map(
+            this.create,
+        );
     }
 
     create(name: string) {
@@ -39,6 +42,9 @@ export default class WalletFactory {
                 break;
             case PrivateKey.NAME:
                 wallet = new PrivateKey(localStorage);
+                break;
+            case Passkey.NAME:
+                wallet = new Passkey(localStorage);
                 break;
             default:
                 throw new InvalidWalletError();

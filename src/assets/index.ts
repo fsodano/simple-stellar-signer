@@ -6,4 +6,5 @@ export { default as RabetIcon } from './wallets-logos/RabetIcon.svelte';
 export { default as WalletConnectIcon } from './wallets-logos/WalletConnectIcon.svelte';
 export { default as VisibilityOnIcon } from './static/VisibilityOnIcon.svelte';
 export { default as VisibilityOffIcon } from './static/VisibilityOffIcon.svelte';
+export { default as PasskeyIcon } from './wallets-logos/PasskeyIcon.svelte';
 export { default as LobstrIcon } from './wallets-logos/LobstrIcon.svelte';

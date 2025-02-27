@@ -546,6 +546,8 @@ window.addEventListener('message', (e) => {
 Simple Signer offers a `/sign` endpoint which is used to send a transaction XDR and get it back with the user's
 signature.
 
+If you are using **Passkey** to sign, see the [Sign with Passkey](#sign-with-passkey) section for additional details on how to send the signed transaction correctly.
+
 It supports multiple configuration options which can be passed via URL or postMessage.
 
 | property name   | type                                                      | value                                                                                            |
@@ -652,6 +654,34 @@ window.addEventListener('message', (e) => {
     }
 });
 ```
+
+## Sign with Passkey
+
+When using **Passkey** to sign transactions, you must use **PasskeyServer** to submit the signed transaction. If you attempt to send a signed transaction with **Passkey** through a standard Horizon or RPC server, you will receive the `txBadAuth` error. This is because **Passkey** requires an additional authentication process that only **PasskeyServer** can handle.
+
+### Steps to Use Passkey
+
+1. **Install Dependencies**: Ensure you have the `passkey-kit` dependency installed in your project.
+2. **Configure PasskeyServer**: Set up your `PasskeyServer` instance with the required credentials and endpoints.
+3. **Submit the Transaction**: Use the `PasskeyServer` to submit the transaction.
+
+### Example Implementation
+
+Here’s how you can integrate **Passkey** into your workflow:
+
+```bash
+  const account = new PasskeyServer({
+    rpcUrl: env.PUBLIC_rpcUrl,
+    launchtubeUrl: env.PUBLIC_launchtubeUrl,
+    launchtubeJwt: env.PRIVATE_launchtubeJwt,
+    mercuryUrl: env.PUBLIC_mercuryUrl,
+    mercuryJwt: env.PRIVATE_mercuryJwt,
+});
+
+const transactionResult = await account.send(xdr);
+```
+
+For more information visit the [passkey-kit](https://github.com/kalepail/passkey-kit) documentation.
 
 ## Event Types
 
